@@ -1,24 +1,57 @@
+apply plugin: 'cipher.so'
 apply plugin: 'com.android.application'
+apply from: 'and_res_guard.gradle'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+
+    signingConfigs {
+        signApk {
+            storeFile file(project.property('storeFile').toString())
+            storePassword project.property('storePassword').toString()
+            keyAlias project.property('keyAlias').toString()
+            keyPassword project.property('keyPassword').toString()
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.tuoniao.sijibao"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.0.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signApk
         }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.signApk
+        }
+    }
+
+    dataBinding{
+        enabled true
+    }
+    compileOptions{
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
@@ -31,4 +64,24 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'com.leon.channel:helper:2.0.3'
+}
+
+//明文底层加密处理
+cipher.so {
+    keys {
+        hello {
+            value = 'Http_url'
+        }
+        httpsKey {
+            value = 'testData'
+        }
+    }
+    encryptSeed = 'tuoniao_sijibao' //用于加密的密钥
 }

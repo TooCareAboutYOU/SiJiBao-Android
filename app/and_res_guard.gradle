@@ -1,0 +1,67 @@
+
+apply plugin: 'AndResGuard'
+apply plugin: 'channel'
+
+rebuildChannel {//从此，打包效率提高十倍以上，即使不开FastMode
+    //这里的目录都是自己定义的，我这里是动态的设置包的名称的，由于versionName比较长，就截取了一段
+//    baseDebugApk = new File(project.buildDir, "app/build/outputs/apk/debug/app-debug.apk")
+//    debugOutputDir = new File("C:/Users/Bright/Desktop/", "rebuildChannel/debug")
+    channelFile=file(project.rootDir.path+"/channels/channel.txt")
+    baseReleaseApk = new File(project.rootDir,  "app/build/outputs/apk/release/AndResGuard_app-release/app-release_aligned_signed.apk")//"outputs/apk/release/AndResGuard_app-release/app-release_aligned_signed.apk")
+    releaseOutputDir = new File(project.rootDir, "channelApk/release")
+    //快速模式：生成渠道包时不进行校验（速度可以提升10倍以上）
+    isFastMode = false
+}
+
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = false
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    whiteList = [
+            // for your icon
+            "R.mipmap.ic_launcher",
+            "R.mipmap.ic_launcher_background",
+            "R.mipmap.ic_launcher_foreground",
+            "R.mipmap.ic_launcher_round",
+            "R.mipmap.ic_launcher-web",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for google-services
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+
+            // 我在实际项目中遇到第三方使用getIdentifier访问的资源的问题，将指定的资源放入白名单后，虽然不闪退了，但还是会出现无法理解的错误。所以只好全部id都放入白名单
+            "R.id.*"
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "resources.arsc"
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.15'
+        //path = "/usr/local/bin/7za"
+    }
+
+    /**
+     * 可选： 如果不设置则会默认覆盖assemble输出的apk
+     **/
+//    inalApkBackupPath = project.rootProject+"${android.defaultConfig.versionName.substring(0, 6)} -base-release.apk"
+
+    /**
+     * 可选: 指定v1签名时生成jar文件的摘要算法
+     * 默认值为“SHA-1”
+     **/
+//     digestalg = "SHA-1"
+}

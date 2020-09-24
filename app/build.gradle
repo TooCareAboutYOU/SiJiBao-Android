@@ -45,6 +45,24 @@ rebuildChannel {//从此，打包效率提高十倍以上，即使不开FastMode
     lowMemory = false
 }
 
+//生成多渠道包
+task assembleMultiChannelApks{
+    dependsOn('resguardRelease','reBuildChannel')
+    doFirst {
+        println("开始执行 --->>> aaaSign")
+    }
+    doLast {
+        println("结束执行 <<<--- aaaSign")
+    }
+}
+//自定义多渠道包
+//异常 ./gradlew reBuildChannel -Pchannels=yingyongbao,gamecenter
+tasks.create("name":"assembleCustomChannels","type":Exec){
+    workingDir "../channelApk/extraRelease"
+    commandLine "./gradlew" ,"./gradlew reBuildChannel -Pchannels=googleplay"
+}
+
+
 android {
 
     signingConfigs {
@@ -165,19 +183,4 @@ cipher.so {
         }
     }
     encryptSeed = 'tuoniao_sijibao' //用于加密的密钥
-}
-
-task assembleMultiChannelApks{
-    dependsOn('resguardRelease','reBuildChannel')
-    doFirst {
-        println("开始执行 --->>> aaaSign2")
-    }
-    doLast {
-        println("结束执行 --->>> aaaSign2")
-    }
-}
-
-//异常
-project.tasks.create("name":"assembleCustomsChannel","type":Exec){
-    commandLine "gradlew" ,"./gradlew reBuildChannel -Pchannels=yingyongbao,gamecenter"
 }

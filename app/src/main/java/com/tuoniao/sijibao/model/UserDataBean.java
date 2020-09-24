@@ -32,4 +32,17 @@ public class UserDataBean implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("UserDataBean{");
+        sb.append("firstName='")
+                .append(firstName)
+                .append('\'');
+        sb.append(", lastName='")
+                .append(lastName)
+                .append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

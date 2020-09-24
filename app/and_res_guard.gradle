@@ -1,24 +1,5 @@
-
 apply plugin: 'AndResGuard'
-apply plugin: 'channel'
 
-//直接编译生成多渠道包
-channel {//从此，打包效率提高十倍以上，即使不开FastMode
-    //多渠道包的命名规则，默认为：${appName}-${versionName}-${versionCode}-${flavorName}-${buildType}
-    apkNameFormat='fandengdushuhui_${flavorName}_${versionName}_${buildType}'
-    channelFile=file(project.rootDir.path+"/channels/channel.txt")
-    isFastMode = false
-}
-//根据已有基础包重新生成多渠道包
-rebuildChannel {//从此，打包效率提高十倍以上，即使不开FastMode
-    //这里的目录都是自己定义的，我这里是动态的设置包的名称的，由于versionName比较长，就截取了一段
-//    baseDebugApk = new File(project.buildDir, "app/build/outputs/apk/debug/app-debug.apk")
-//    debugOutputDir = new File(project.buildDir, "rebuildChannel/debug")
-    channelFile=file(project.rootDir.path+"/channels/channel.txt")
-    baseReleaseApk = new File(project.rootDir,  "app/build/outputs/apk/release/AndResGuard_app-release/app-release_aligned_signed.apk")//"outputs/apk/release/AndResGuard_app-release/app-release_aligned_signed.apk")
-    releaseOutputDir = new File(project.rootDir, "channelApk/release")
-    //快速模式：生成渠道包时不进行校验（速度可以提升10倍以上）
-}
 
 
 
@@ -75,11 +56,12 @@ andResGuard {
 //        }
 //    }
 
-    finalApkBackupPath = new File(project.rootDir.path+"/app/release/"+project.name+".apk")
-
+    //自定义生成的apk存放目录
+//    finalApkBackupPath = new File(project.rootDir.path+"/app/release/"+project.name+".apk")
     /**
      * 可选: 指定v1签名时生成jar文件的摘要算法
      * 默认值为“SHA-1”
      **/
 //     digestalg = "SHA-1"
 }
+

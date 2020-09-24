@@ -1,27 +1,26 @@
 package com.tuoniao.sijibao;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.core.util.TimeUtils;
-
-import android.icu.util.TimeUnit;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.leon.channel.helper.ChannelReaderUtil;
 import com.tuoniao.sijibao.model.UserDataBean;
 import com.tuoniao.sijibao.widgets.FreeTrialDialogViews;
 
-import java.text.SimpleDateFormat;
+import org.joor.Reflect;
+
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.Scanner;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -31,28 +30,102 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivityS";
 
     FreeTrialDialogViews mFreeTrialDialogViews;
 
+    /**
+     * 反射截取字符串
+     */
+    public static String getValueEx(int key) {
+        String value = null;
+        //方式一
+//        try {
+//            value = Reflect.onClass("java.lang.String").create("hello World").call("substring", key).call("toString").get();
+//        } catch (ReflectException e) {
+//            e.printStackTrace();
+//            value = "";
+//        }
+        //方式二
+        value = Reflect.onClass("java.lang.String")
+                .create("hello World")
+                .as(StringProxy.class)
+                .substring(key);
+
+        return value;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String[] zimu=new String[]{"a","b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "u",
+                "v",
+                "w",
+                "x",
+                "y",
+                "z"
+        };
+        String[] shuzi = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+
+        List<String> list = Arrays.asList(zimu);
+
+        Collections.shuffle(list);
+
+        for (String s : list) {
+            Log.e(TAG, s + "");
+        }
+
+        init();
+    }
+
+    private void init() {
         mFreeTrialDialogViews = findViewById(R.id.free_hint_view);
 
         findViewById(R.id.tv_action).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mFreeTrialDialogViews.show("Hello World!");
+
+//                Toast.makeText(MainActivity.this, "反射：" + getValueEx(6), Toast.LENGTH_SHORT)
+//                        .show();
+                Toast.makeText(MainActivity.this,
+                               "当前渠道：" + ChannelReaderUtil.getChannel(getApplicationContext()),
+                               Toast.LENGTH_LONG)
+                        .show();
+
             }
         });
 
         UserFactory<UserDataBean> factory = UserDataBean::new;
         UserDataBean bean = factory.create("姓", "名-非工作日加班，上/下班忘打开，补卡申请");
+        Log.i(TAG, bean.toString());
 
         //Predicate接口
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -130,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     }).forEach(new Consumer<String>() {
                 @Override
                 public void accept(String s) {
-                    Log.i(TAG, "filter: " + s.toString());
+                    Log.i(TAG, "filter: " + s);
                 }
             });
 
@@ -145,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
                     }).forEach(new Consumer<String>() {
                 @Override
                 public void accept(String s) {
-                    Log.i(TAG, "sorted: " + s.toString());
+                    Log.i(TAG, "sorted: " + s);
                 }
             });
 
@@ -159,13 +232,13 @@ public class MainActivity extends AppCompatActivity {
                     }).sorted(new Comparator<String>() {
                 @Override
                 public int compare(String o1, String o2) {
-                    Log.i(TAG, "compare: " + o1.toString() + "\t\t" + o2);
+                    Log.i(TAG, "compare: " + o1 + "\t\t" + o2);
                     return o2.compareTo(o1);
                 }
             }).forEach(new Consumer<String>() {
                 @Override
                 public void accept(String s) {
-                    Log.i(TAG, "map: " + s.toString());
+                    Log.i(TAG, "map: " + s);
                 }
             });
             //1、Map - putIfAbsent
@@ -228,7 +301,6 @@ public class MainActivity extends AppCompatActivity {
             });
             Log.i(TAG, "打印merge：" + resultMerge);
 
-
             //Match 匹配
             boolean anyBool = stringList.stream()
                     .anyMatch(new Predicate<String>() {
@@ -257,7 +329,6 @@ public class MainActivity extends AppCompatActivity {
                     });
             Log.i(TAG, "nonBool：" + nonBool);
 
-
             //Count 计数
             long count = stringList.stream()
                     .filter(new Predicate<String>() {
@@ -268,7 +339,6 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .count();
             Log.i(TAG, "count：" + count);
-
 
             //Reduce 规约
             Optional<String> optional = stringList.stream()
@@ -288,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //并行Streams
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             //创建数据
             int max = 100;
             List<String> stringList = new ArrayList<>(max);
@@ -302,7 +372,6 @@ public class MainActivity extends AppCompatActivity {
             long tResult = time1 - time0;
             Log.i(TAG, "串行排序时间：" + tResult);
 
-
             //并行排序 打印排序的时间
             long time00 = System.nanoTime();
             long count1 = stringList.parallelStream().sorted().count();
@@ -310,29 +379,12 @@ public class MainActivity extends AppCompatActivity {
             long tResult1 = time11 - time00;
             Log.i(TAG, "并行排序时间：" + tResult1);
         }
-
-        ScannerTest();
-
     }
 
-    /**
-     * 通过 Scanner 类来获取用户的输入。
-     */
-    private void ScannerTest() {
-        AppCompatEditText tv = findViewById(R.id.acTvMsg);
-        Scanner scanner = new Scanner(System.in);
-        //从键盘接收数据
 
-        Log.i(TAG, "next方式接收>>>>>>>>>>>>");
-        //判断是否还有输入
-        if (scanner.hasNext()) {
-            Log.i(TAG, "next: "+scanner.next());
-        }
-        Log.i(TAG, "next方式接收>>>>>>>>>>>>");
-        scanner.close();
-
+    public interface StringProxy{
+        String substring(int beginIndex);
     }
-
 
     @Override
     protected void onDestroy() {

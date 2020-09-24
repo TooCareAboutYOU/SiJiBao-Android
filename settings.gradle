@@ -1,2 +1,4 @@
 rootProject.name='司机宝'
 include ':app'
+include ':lib_db'
+include ':utils_fandeng'

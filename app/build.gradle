@@ -176,3 +176,8 @@ task assembleMultiChannelApks{
         println("结束执行 --->>> aaaSign2")
     }
 }
+
+//异常
+project.tasks.create("name":"assembleCustomsChannel","type":Exec){
+    commandLine "gradlew" ,"./gradlew reBuildChannel -Pchannels=yingyongbao,gamecenter"
+}

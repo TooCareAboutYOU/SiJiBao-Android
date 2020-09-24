@@ -1,0 +1,18 @@
+
+B
+java:S1444:",Make this "public static holder" field final(ÄıœØ
+h
+java:S1104:"RMake holder a static final constant or non-public and provide accessors if needed.(ÄıœØ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿòâã
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´’´Ï
+œ
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ş‚ÄÔıÿÿÿÿ
+—
+java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ù„—
+œ
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÂŠ¬öûÿÿÿÿ
+>	java:S108")Either remove or fill this block of code.(Ü«Ê
+A
+java:S11681"+Return an empty collection instead of null.(¥¹ï

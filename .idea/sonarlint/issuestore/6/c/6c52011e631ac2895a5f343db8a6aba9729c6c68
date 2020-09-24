@@ -1,78 +1,69 @@
 
 K
-java:S1604›"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
-g
-java:S1858Á"D"s" is already a string, there's no need to call "toString()" on it.(Š’–¾ûÿÿÿÿ8œÅ¾şÂ.
-W
-java:S1611k":Remove the parentheses around the "userDataBean" parameter( ¼ÈÄ8œÅ¾şÂ.
-F
-java:S1604¸"(Make this anonymous inner class a lambda(†Œ¨8œÅ¾şÂ.
-F
-java:S1604³"(Make this anonymous inner class a lambda(İı—Á8œÅ¾şÂ.
-c
-java:S1858»"E"o1" is already a string, there's no need to call "toString()" on it.(›àµÁ8œÅ¾şÂ.
+java:S1604Æ"(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
 K
-java:S1604–"(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
-w
-java:S4276^"[Refactor this code to use the more specialised Functional Interface 'UnaryOperator<String>'(·“¾	8œÅ¾şÂ.
-J
-java:S1604~"(Make this anonymous inner class a lambda(ğèıòúÿÿÿÿ8œÅ¾şÂ.
-E
-java:S1604­"(Make this anonymous inner class a lambda(Ãî«N8œÅ¾şÂ.
-N
-java:S1481Í"+Remove this unused "count1" local variable.(ìÆ¬ÿùÿÿÿÿ8œÅ¾şÂ.
-F
-java:S1604Ğ"(Make this anonymous inner class a lambda(Ä®ª·8œÅ¾şÂ.
-F
-java:S1604É"(Make this anonymous inner class a lambda(Æ¬æø8œÅ¾şÂ.
+java:S1604"(Make this anonymous inner class a lambda(„´É’üÿÿÿÿ8œÅ¾şÂ.
 K
-java:S1604Ø"(Make this anonymous inner class a lambda(ÈÍ€ıÿÿÿÿ8œÅ¾şÂ.
-K
-java:S1604ƒ"(Make this anonymous inner class a lambda(Å¾Ñüÿÿÿÿ8œÅ¾şÂ.
+java:S1604²"(Make this anonymous inner class a lambda(Å¾Ñüÿÿÿÿ8œÅ¾şÂ.
 F
-java:S1604ò"(Make this anonymous inner class a lambda(£ì­³8œÅ¾şÂ.
+java:S1604è"(Make this anonymous inner class a lambda(†Œ¨8œÅ¾şÂ.
 K
-java:S1604•"(Make this anonymous inner class a lambda(âœ¹ëøÿÿÿÿ8œÅ¾şÂ.
-F
-java:S1604ø"(Make this anonymous inner class a lambda(·ĞÁ“8œÅ¾şÂ.
-h
-java:S1128"FRemove this unused import 'java.util.concurrent.atomic.AtomicInteger'.(¿êäœøÿÿÿÿ8™üìşÂ.
-x
-java:S4276]"[Refactor this code to use the more specialised Functional Interface 'ToIntFunction<String>'(öÌµŠ8œÅ¾şÂ.
-D
-java:S2201|"'The return value of "get" must be used.(ÿ–»8œÅ¾şÂ.
+java:S1604î"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
+K
+java:S1604ˆ"(Make this anonymous inner class a lambda(ÈÍ€ıÿÿÿÿ8œÅ¾şÂ.
 Q	java:S110$"<This class has 9 parents which is greater than 5 authorized.(²Ú±
 J
-java:S1604C"(Make this anonymous inner class a lambda(ÆÈçÆÿÿÿÿÿ8œÅ¾şÂ.
+java:S1604o"(Make this anonymous inner class a lambda(ÆÈçÆÿÿÿÿÿ8…õå€Ì.
 K
-java:S1604¥"(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
+java:S1604Õ"(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
 K
-java:S1604 "(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
-a
-java:S1858­"D"s" is already a string, there's no need to call "toString()" on it.(Ççğ18œÅ¾şÂ.
-K
-java:S1604ª"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
-^	java:S125İ"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8œÅ¾şÂ.
-L
-java:S2201}"*The return value of "orElse" must be used.(÷Çºœúÿÿÿÿ8œÅ¾şÂ.
-Y	java:S125ß"<This block of commented-out lines of code should be removed.(¼©¬Š8œÅ¾şÂ.
-G
-java:S1481f"*Remove this unused "bean1" local variable.(âÁŞÍ8œÅ¾şÂ.
-J
-java:S2201{"-The return value of "isPresent" must be used.(ÈùéÛ8şØïıÂ.
-K
-java:S1604à"(Make this anonymous inner class a lambda(„´É’üÿÿÿÿ8œÅ¾şÂ.
+java:S1604®"(Make this anonymous inner class a lambda(ğèıòúÿÿÿÿ8œÅ¾şÂ.
 F
-java:S1604Œ"(Make this anonymous inner class a lambda(ø”Ÿ·8œÅ¾şÂ.
+java:S1604ã"(Make this anonymous inner class a lambda(İı—Á8œÅ¾şÂ.
 K
-java:S1604³"(Make this anonymous inner class a lambda(æ¥ Ğúÿÿÿÿ8œÅ¾şÂ.
-Q
-java:S1611T"/Remove the parentheses around the "s" parameter(‹ó¹¿üÿÿÿÿ8œÅ¾şÂ.
-M
-java:S1481Å"*Remove this unused "count" local variable.(£ë‰şÿÿÿÿ8œÅ¾şÂ.
-g
-java:S1858"D"s" is already a string, there's no need to call "toString()" on it.(˜¡õşÿÿÿÿ8œÅ¾şÂ.
-K
-java:S1604¾"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
+java:S1604à"(Make this anonymous inner class a lambda(æ¥ Ğúÿÿÿÿ8œÅ¾şÂ.
+F
+java:S1604ù"(Make this anonymous inner class a lambda(Æ¬æø8œÅ¾şÂ.
 G
-java:S14812"*Remove this unused "shuzi" local variable.(·ô°…8Ñºù½Ç.
+java:S1481_"*Remove this unused "shuzi" local variable.(·ô°…8Ñºù½Ç.
+E
+java:S1604Ú"(Make this anonymous inner class a lambda(Ãî«N8œÅ¾şÂ.
+K
+java:S1604Î"(Make this anonymous inner class a lambda(ÓıŠ¨üÿÿÿÿ8œÅ¾şÂ.
+x
+java:S4276"[Refactor this code to use the more specialised Functional Interface 'UnaryOperator<String>'(·“¾	8œÅ¾şÂ.
+X
+java:S1611›":Remove the parentheses around the "userDataBean" parameter( ¼ÈÄ8œÅ¾şÂ.
+Y	java:S125"<This block of commented-out lines of code should be removed.(¼©¬Š8œÅ¾şÂ.
+N
+java:S1481ù"+Remove this unused "count1" local variable.(ìÆ¬ÿùÿÿÿÿ8œÅ¾şÂ.
+K
+java:S1604Ë"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
+F
+java:S1604¨"(Make this anonymous inner class a lambda(·ĞÁ“8œÅ¾şÂ.
+K
+java:S1604Ú"(Make this anonymous inner class a lambda(åı “ÿÿÿÿÿ8œÅ¾şÂ.
+R
+java:S1611„"/Remove the parentheses around the "s" parameter(‹ó¹¿üÿÿÿÿ8œÅ¾şÂ.
+H
+java:S1481–"*Remove this unused "bean1" local variable.(âÁŞÍ8œÅ¾şÂ.
+F
+java:S1604€"(Make this anonymous inner class a lambda(Ä®ª·8œÅ¾şÂ.
+M
+java:S1481ò"*Remove this unused "count" local variable.(£ë‰şÿÿÿÿ8œÅ¾şÂ.
+]	java:S1250"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8œÅ¾şÂ.
+]	java:S125u"<This block of commented-out lines of code should be removed.(ûŠ”¾ûÿÿÿÿ8´‹å€Ì.
+y
+java:S4276"[Refactor this code to use the more specialised Functional Interface 'ToIntFunction<String>'(öÌµŠ8œÅ¾şÂ.
+M
+java:S2201­"*The return value of "orElse" must be used.(÷Çºœúÿÿÿÿ8œÅ¾şÂ.
+K
+java:S2201«"-The return value of "isPresent" must be used.(ÈùéÛ8şØïıÂ.
+F
+java:S1604»"(Make this anonymous inner class a lambda(ø”Ÿ·8œÅ¾şÂ.
+K
+java:S1604Ä"(Make this anonymous inner class a lambda(âœ¹ëøÿÿÿÿ8œÅ¾şÂ.
+E
+java:S2201¬"'The return value of "get" must be used.(ÿ–»8œÅ¾şÂ.
+F
+java:S1604¢"(Make this anonymous inner class a lambda(£ì­³8œÅ¾şÂ.

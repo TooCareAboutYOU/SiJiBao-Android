@@ -8,6 +8,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../Androidx-master/google_camerax/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Androidx-master/google_camerax/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Androidx-master/google_camerax/src/main/java/com/google/camerax/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Androidx-master/google_camerax/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../HuangDou/dushu-android/gradle.properties">
           <value>
             <set />
@@ -98,6 +118,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/tuoniao/sijibao/RxJavaActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/tuoniao/sijibao/Test.java">
           <value>
             <set />
@@ -123,7 +148,217 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/fir_http_gradle/src/main/java/com/exoplayer/fir_http_gradle/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_biometric/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_biometric/src/main/java/com/google/biometric/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_biometric/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/src/main/java/com/google/cronet/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/src/main/java/com/google/cronet/app/CronetApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/google_cronet/src/main/res/xml/network_security_config.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/build/generated/ap_generated_sources/debug/out/com/exoplayer/hilt/bean/UserBean_Factory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/AnalyticsAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/AnalyticsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/AnalyticsServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/api/AnalyticsService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/api/AnalyticsServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/app/HiltApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/bean/DogBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/bean/UserBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/binds/ChinaCar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/binds/ChinaEngine.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/binds/Engine.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/binds/MainModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/contentproviders/HiltContentProvider.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/AnalyticsModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/DogBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/DogModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/MainModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/NetworkModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/interceptors/AuthInterceptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/qualifiers/AuthInterceptorOkHttpClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/module/qualifiers/NetworkModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/provide/DogModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/provides/DogModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/qualifier/AmericaEngine.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/qualifier/AmericaModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/qualifier/MadeInCN.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/java/com/exoplayer/hilt/qualifier/MadeInUSA.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/hilt/src/main/res/layout/activity_main.xml">
           <value>
             <set />
           </value>
@@ -159,6 +394,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/utils_fandeng/src/main/java/com/fandeng/utils/ToastUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../cronet-sample/android/app/src/main/java/com/google/samples/cronet_sample/data/ImageRepository.java">
           <value>
             <set />
           </value>

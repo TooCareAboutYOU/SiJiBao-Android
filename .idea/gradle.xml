@@ -11,6 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fir_http_gradle" />
+            <option value="$PROJECT_DIR$/google_biometric" />
+            <option value="$PROJECT_DIR$/google_cronet" />
+            <option value="$PROJECT_DIR$/hilt" />
             <option value="$PROJECT_DIR$/lib_db" />
             <option value="$PROJECT_DIR$/utils_fandeng" />
           </set>

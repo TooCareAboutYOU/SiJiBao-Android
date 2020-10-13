@@ -1,8 +1,8 @@
 
-q
-java:S2095"OUse try-with-resources or close this "InputStreamReader" in a "finally" clause.(í…ÇÁýÿÿÿÿ8ŸØ¿ýÂ.
 i
 java:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(øÆˆ€8ŸØ¿ýÂ.
-]	java:S125$"<This block of commented-out lines of code should be removed.(¾ÜÉŠûÿÿÿÿ8Œ’ÃýÂ.
 f
 java:S2095"IUse try-with-resources or close this "InputStream" in a "finally" clause.(è…™8ŸØ¿ýÂ.
+q
+java:S2095"OUse try-with-resources or close this "InputStreamReader" in a "finally" clause.(í…ÇÁýÿÿÿÿ8ŸØ¿ýÂ.
+]	java:S125$"<This block of commented-out lines of code should be removed.(¾ÜÉŠûÿÿÿÿ8Œ’ÃýÂ.

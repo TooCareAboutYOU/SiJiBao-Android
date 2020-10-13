@@ -1,6 +1,60 @@
 apply plugin: 'AndResGuard'
+apply plugin: 'channel'
 
 
+def channelPath=project.rootDir.path+"/channels/channel.txt"
+
+/**
+ * 直接编译生成多渠道包
+ */
+//通过命令添加渠道参数
+//./gradlew channelRelease -Pchannels=yingyongbao,gamecenter
+channel{//从此，打包效率提高十倍以上，即使不开FastMode
+    //多渠道包的命名规则，默认为：${appName}-${versionName}-${versionCode}-${flavorName}-${buildType}
+    apkNameFormat='fandengdushuhui_${flavorName}_${versionName}_${buildType}'
+    //指定渠道文件
+    channelFile=file(channelPath)
+    //多渠道包的输出目录，默认为new File(project.buildDir,"channel")
+    baseOutputDir = new File(project.rootDir, "channelApk")
+    //快速模式：生成渠道包时不进行校验（速度可以提升10倍以上，默认为false）
+    isFastMode = true
+    //buildTime的时间格式，默认格式：yyyyMMdd-HHmmss
+    buildTimeDateFormat = 'yyyyMMdd-HH:mm:ss'
+    //低内存模式（仅针对V2签名，默认为false）：只把签名块、中央目录和EOCD读取到内存，不把最大头的内容块读取到内存，在手机上合成APK时，可以使用该模式
+    lowMemory = false
+}
+
+/**
+ * 根据已有基础包重新生成多渠道包
+ */
+//通过命令添加渠道参数
+//./gradlew reBuildChannel -Pchannels=yingyongbao,gamecenter
+rebuildChannel {//从此，打包效率提高十倍以上，即使不开FastMode
+    //这里的目录都是自己定义的，我这里是动态的设置包的名称的，由于versionName比较长，就截取了一段
+//    baseDebugApk = new File(project.buildDir, "app/build/outputs/apk/debug/app-debug.apk")
+//    debugOutputDir = new File(project.buildDir, "rebuildChannel/debug")
+    channelFile=file(channelPath)
+    baseReleaseApk = new File(project.rootDir,"app/build/outputs/apk/release/AndResGuard_app-release/app-release_aligned_signed.apk")
+//    baseReleaseApk = new File(project.rootDir,"app/release/fandengdushuhui_dushutest_4.7.0.11_release.apk");
+    releaseOutputDir = new File(project.rootDir, "channelApk/rebuildRelease")
+    //快速模式：生成渠道包时不进行校验（速度可以提升10倍以上，默认为false）
+    isFastMode = true
+    //低内存模式（仅针对V2签名，默认为false）：只把签名块、中央目录和EOCD读取到内存，不把最大头的内容块读取到内存，在手机上合成APK时，可以使用该模式
+    lowMemory = false
+}
+
+//生成多渠道包
+task assembleReleaseMultiChannelApks(dependsOn:['resguardRelease','reBuildChannel'])
+
+//resguardReleaseTask.finalizedBy(reBuildChannelTask)
+//reBuildChannel.finalizedBy(andResGuard)
+//reBuildChannel.mustRunAfter(andResGuard)
+//自定义多渠道包
+//异常 ./gradlew reBuildChannel -Pchannels=googlplay
+//tasks.create("name":"assembleCustomChannels","type":Exec){
+//    workingDir "../"
+//    commandLine "./gradlew" ,"./gradlew reBuildChannel -Pchannels=googlplay"
+//}
 
 
 andResGuard {
@@ -64,3 +118,45 @@ andResGuard {
      **/
 //     digestalg = "SHA-1"
 }
+
+//task assembleReleaseMultiChannelApks{//(dependsOn:['resguardRelease']){
+//
+//    Task resguardReleaseTask=project.tasks.findByName('channelRelease')
+//    Task reBuildChannelTask=project.tasks.getByName('reBuildChannel')
+//
+//    doFirst {
+//        System.out.println("运行doFirst")
+//    }
+//
+//    doLast {
+//        System.out.println("运行doLast")
+//    }
+//
+//    SortedMap<String,Task> taskMap1=project.tasks.getAsMap()
+//    taskMap1.each {
+//        System.out.println("打印key："+it.key+", vaule："+it.value.toString())
+////    if ("task ':app:resguardRelease'" == it.value.toString()){
+////        System.out.println("内部：打印key："+it.key+", vaule："+it.value.toString())
+////        Task task=it.value;
+////        task.finalizedBy(reBuildChannelTask)
+////    }
+//    }
+//
+//    System.out.println("运行外部")
+//    if (resguardReleaseTask != null){
+//        System.out.println("运行内部1")
+//    }
+//
+//    if (reBuildChannelTask != null){
+//        System.out.println("运行内部2")
+//        build.finalizedBy(reBuildChannelTask)
+//
+//    }
+//
+//    if (resguardReleaseTask != null){
+//        System.out.println("运行内部3")
+//        if (reBuildChannelTask != null){
+//            System.out.println("运行内部4")
+//        }
+//    }
+//}

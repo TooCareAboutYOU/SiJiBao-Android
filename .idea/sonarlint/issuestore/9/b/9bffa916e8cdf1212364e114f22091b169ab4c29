@@ -1,0 +1,11 @@
+
+T
+java:S1128"2Remove this unused import 'android.widget.Button'.(²òıÿÿÿÿ8£ëúÙÑ.
+X	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±8£ëúÙÑ.
+]
+java:S1128"@Remove this unused import 'androidx.biometric.BiometricManager'.(¯£¡Ì8şá‰ÚÑ.
+t
+java:S1450"WRemove the "executor" field and declare it as a local variable in the relevant methods.(äü¥ 8£ëúÙÑ.
+O
+java:S1128
+"3Remove this unused import 'android.content.Intent'.(³ğ‹G8şá‰ÚÑ.

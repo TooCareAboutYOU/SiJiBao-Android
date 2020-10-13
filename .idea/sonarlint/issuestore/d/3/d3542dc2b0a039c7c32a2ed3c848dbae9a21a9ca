@@ -1,0 +1,11 @@
+
+X	java:S110"<This class has 9 parents which is greater than 5 authorized.(²Ú±8…‡æÔÑ.
+z
+java:S1450"XRemove the "mExecutor" field and declare it as a local variable in the relevant methods.(òÜÜ§ÿÿÿÿÿ8ÇÒ¯ÕÑ.
+w
+java:S1192."UDefine a constant instead of duplicating this literal "MyUrlRequestCallBack" 7 times.(Æ¶Âùÿÿÿÿ8ı•ÕÖÑ.
+o	java:S116"SRename this field "HTTP_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú™ó«8·Â•ÕÑ.
+O
+java:S1128"3Remove this unused import 'android.content.Intent'.(³ğ‹G8’ÙâÖÑ.
+k
+java:S1128"IRemove this unused import 'android.hardware.biometrics.BiometricManager'.(ğÔ¯şÿÿÿÿ8’ÙâÖÑ.
